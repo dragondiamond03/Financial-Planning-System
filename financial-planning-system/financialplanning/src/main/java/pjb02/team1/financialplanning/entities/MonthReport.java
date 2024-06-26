@@ -15,7 +15,6 @@ import java.util.List;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@IdClass(MonthReportPK.class)
 @Table(name = "MONTH_REPORT")
 public class MonthReport extends BaseEntity{
 
@@ -24,10 +23,6 @@ public class MonthReport extends BaseEntity{
     @GeneratedValue(generator = "MONTH_REPORT_ID")
     @GenericGenerator(name = "MONTH_REPORT_ID", strategy = "pjb02.team1.financialplanning.common.utils.MonthReportIdGenerator")
     private String monthReportId;
-
-    @Id
-    @Column(name = "TERM_ID",columnDefinition = "NVARCHAR(20)")
-    private String termId;
 
     @Column(name = "MONTH_REPORT_NAME",columnDefinition = "NVARCHAR(255)")
     private String monthReportName;

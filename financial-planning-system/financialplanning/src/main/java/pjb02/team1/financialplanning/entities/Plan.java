@@ -12,7 +12,6 @@ import java.util.List;
 @Setter
 @Entity
 @SuperBuilder
-@IdClass(PlanPK.class)
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "PLAN")

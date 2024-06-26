@@ -20,10 +20,10 @@ import java.util.List;
 public class Term extends BaseEntity {
 
     @Id
-    @Column(name = "TERM_ID", columnDefinition = "INT")
+    @Column(name = "TERM_ID", columnDefinition = "NVARCHAR(20)")
     @GeneratedValue(generator = "TERM_ID")
     @GenericGenerator(name = "TERM_ID", strategy = "pjb02.team1.financialplanning.common.utils.TermIdGenerator")
-    private int termId;
+    private String termId;
 
     @Column(name = "TERM_NAME", columnDefinition = "NVARCHAR(255)")
     @NotNull
